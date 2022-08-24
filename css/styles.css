@@ -158,6 +158,8 @@ border-bottom: 1px solid #ECECEC;
   column-gap: 50px;
 }
 .contact {
+  display:flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
   /* outline: 1px solid #2196f3; */
@@ -169,22 +171,17 @@ border-bottom: 1px solid #ECECEC;
   letter-spacing: 0.02em;
   color: var(--text-color);
 }
-.contact::before{
-  position: absolute;
-left: 77.69%;
-right: 21.69%;
-top: 1.09%;
-bottom: 98.36%;
 
-background: #757575;
+.icon-contact  {
+  margin-right: 10px;
+  fill: currentColor;
 }
 
 .contact:hover,
 .contact:focus {
   color: var(--accent-color);
 }
-/* .contact-item {
-} */
+
 
 .contact-item {
 flex-basis: calc((100%-50px)/2);
@@ -322,7 +319,6 @@ flex-basis: calc((100% - 2*30px)/3);
 }
 .team-mate-card {
   flex-basis: calc((100% - 3*30px)/4);
-
   background-color: var(--text-light-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -352,42 +348,40 @@ padding-bottom: 30px;
   display: flex;
   padding: 0;
   margin: 0;
-  outline:1px solid #188ce8;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-
-
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 .actions .link {
-  display: block; 
-  padding: 0px;
-  border: 1px solid tomato;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+    padding: 0px;
   width: 44px;
   height: 44px;
   color: var(--icon-fill-color);
   border-radius: 50%;
-  /* flex-basis: calc((100%-3*10px)/4); */
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background-color: var(--text-light-color);
   cursor: pointer;
 }
+
 .actions .link:hover,
 .actions .link:focus {
   background-color: var(--accent-color);
-  fill: var(--text-light-color);
+  color: var(--text-light-color);
   }
-
-.button-icon {
-  fill:currentColor;
+.icon-actions {
+  fill: currentColor;
 }
-.icon-instagram {
-  fill: var(--text-light-color);
-  background-color: var(--accent-color);
-    
+
+.contact:hover,
+.contact:focus {
+      fill: var(--text-light-color);
+    color: var(--accent-color);
+}
+.icon-actions {
+  --color4: currentColor;
 }
 /*================== FOOTER ==================*/
 
