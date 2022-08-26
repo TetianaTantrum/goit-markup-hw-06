@@ -263,9 +263,10 @@ ul ol {
   flex-basis: calc((100% - 3 * 30px) / 4);
 }
 .icon-features {
-  width: 270px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 120px;
-  padding: 25px 100px;
   margin-bottom: 30px;
   background-color: #f5f4fa;
   border-radius: 4px;
@@ -499,7 +500,8 @@ ul ol {
 .project-item {
   flex-basis: calc((100% - 2 * 30px) / 3);
 }
-.project-card:hover {
+.project-card:hover,
+.project-card:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
@@ -513,7 +515,6 @@ ul ol {
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
 }
-
 .project-title {
   margin-bottom: 4px;
   font-weight: 700;
@@ -534,21 +535,24 @@ ul ol {
   align-items: baseline;
   gap: 70px;
 }
-.socials-list {
-  display: flex;
-  gap: 10px;
-}
-
 .socials-title {
   margin-bottom: 20px;
   color: var(--text-light-color);
 }
+.socials-list {
+  display: flex;
+  gap: 10px;
+}
+.socials-item {
+  /* flex-basis: calc((100%-3*10px)/4); */
+}
 
 .socials-link {
   display: flex;
+  align-items: center;
+  justify-content: center;
   width: 44px;
   height: 44px;
-  padding: 12px 12px;
   color: var(--text-light-color);
   border-radius: 50%;
   fill: currentColor;
