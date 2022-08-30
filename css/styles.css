@@ -141,6 +141,17 @@ ul ol {
 } */
 .current {
   color: var(--accent-color);
+  position: relative;
+}
+.current::after {
+content:"";
+display: block;
+position: absolute;
+bottom: 0;
+width: 100%;
+height: 4px;
+background: #2196F3;
+border-radius: 2px;
 }
 .nav:hover,
 .nav:focus {
@@ -165,18 +176,15 @@ ul ol {
   color: var(--text-color);
   fill: currentColor;
 }
-
 .icon-contact {
   display: flex;
   align-items: center;
   margin-right: 10px;
 }
-
 .contact:hover,
 .contact:focus {
   color: var(--accent-color);
 }
-
 .contact-item {
   flex-basis: calc((100%-50px) / 2);
 }
@@ -258,7 +266,8 @@ ul ol {
   border-radius: 4px;
 }
 .socials-title,
-.feature-title {
+.feature-title, 
+.occupation-title{
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
@@ -306,11 +315,31 @@ ul ol {
   flex-wrap: wrap;
   gap: 30px;
 }
+.occupation-thumb {
+  position: relative;
 
+}
+.occupation-title {
+position: absolute;
+  color: #ffffff;
+
+width: 100%;
+height: 70px;
+bottom: 0;
+margin-bottom: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), rgba(47, 48, 58, 0.8);
+border: 1px solid #000000;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
 .occupation-item {
   flex-basis: calc((100% - 2 * 30px) / 3);
 }
-
+/* =================== Team ======================== */
 .team-section {
   background-color: #f5f4fa;
 }
