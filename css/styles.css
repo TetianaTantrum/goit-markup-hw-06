@@ -137,9 +137,13 @@ ul ol {
   font-size: 14px;
   line-height: 1.14;
   color: var(--title-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-/* .menu .link {
-} */
+.nav:hover,
+.nav:focus {
+  color: var(--accent-color);
+}
 .current {
   color: var(--accent-color);
   position: relative;
@@ -154,10 +158,7 @@ height: 4px;
 background: #2196F3;
 border-radius: 2px;
 }
-.nav:hover,
-.nav:focus {
-  color: var(--accent-color);
-}
+
 /*================== Contacts =================*/
 .contacts {
   display: flex;
@@ -176,6 +177,8 @@ border-radius: 2px;
   letter-spacing: 0.02em;
   color: var(--text-color);
   fill: currentColor;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-contact {
   display: flex;
@@ -238,11 +241,13 @@ border-radius: 2px;
   letter-spacing: 0.06em;
   background-color: var(--accent-color);
   color: var(--text-light-color);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-btn:hover,
 .hero-btn:focus {
-  background-color: var(--text-light-color);
+
   background-color: var(--accent-hover-color);
   cursor: pointer;
 }
@@ -398,6 +403,10 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   cursor: pointer;
   color: var(--icon-fill-color);
   fill: currentColor;
+
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .actions-link:hover,
@@ -456,6 +465,8 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 .address-location {
   text-decoration: none;
   color: var(--text-light-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address-contacts {
   text-decoration: none;
@@ -495,6 +506,10 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   letter-spacing: 0.03em;
   background-color: var(--button-color);
   color: var(--title-color);
+
+  transition-property: background-color, color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .filter-btn:hover,
 .filter-btn:focus {
@@ -520,24 +535,40 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 .project-card:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
   position: relative;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.project-card:hover::before,
-.project-card:focus::before {
-  content: "";
+.project-card {
+  position: relative;
   display: block;
+  text-decoration: none;
+    overflow: hidden;  
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+.project-card::before,
+.project-card::before {
+  content: "";
+  top: 200%;
+  left: 0;
+  display: inline-block;
   position: absolute;
   width: 100%;
   height: 294px;
-  background: rgba(33, 150, 243, 0.9);
+    background: rgba(33, 150, 243, 0.9);
+
+  transform: translateY(calc(-100%));
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 
+.project-card:hover::before,
+  .project-card:focus::before {
+    content: "";
+  transform: translateY(0%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 
-.project-card {
-  display: block;
-  text-decoration: none;
-}
 .project-notes {
   padding: 20px 24px;
   border-right: 1px solid #eeeeee;
@@ -586,6 +617,8 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 50%;
   fill: currentColor;
   background: rgba(255, 255, 255, 0.1);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .socials-link:hover,
 .socials-link:focus {
@@ -628,4 +661,5 @@ background-color: #ffffff;
   color: var(--darkest-color);
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  /* background-color: #fff; */
 }
