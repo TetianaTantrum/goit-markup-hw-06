@@ -399,66 +399,88 @@
     </main>
     <footer class="footer">
       <div class="container">
-        <div>
-          <a href="" lang="en" class="logo-footer link"
-            ><span class="logo-first-part">Web</span>Studio</a
-          >
-          <address class="footer-address">
-            <ul class="address-list list">
-              <li class="address-item">
-                <a
-                  href="https://goo.gl/maps/QcVGsAYmoGPsiCXT9"
-                  class="address-location link"
-                  >м. Київ, пр-т Лесі Українки, 26</a
-                >
+        <div class="footer-left-part">
+          <div>
+            <a href="" lang="en" class="logo-footer link"
+              ><span class="logo-first-part">Web</span>Studio</a
+            >
+            <address class="footer-address">
+              <ul class="address-list list">
+                <li class="address-item">
+                  <a
+                    href="https://goo.gl/maps/QcVGsAYmoGPsiCXT9"
+                    class="address-location link"
+                    >м. Київ, пр-т Лесі Українки, 26</a
+                  >
+                </li>
+                <li class="address-item">
+                  <a
+                    href="mailto:info@devstudio.com"
+                    class="address-contacts link"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li class="address-item">
+                  <a href="tel:+380961111111" class="address-contacts link"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="socials">
+            <h3 class="socials-title">приєднуйтесь</h3>
+            <ul class="socials-list list">
+              <li class="socials-item">
+                <a href="" class="socials-link link">
+                  <svg width="20" height="20">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="address-item">
-                <a
-                  href="mailto:info@devstudio.com"
-                  class="address-contacts link"
-                  >info@devstudio.com</a
-                >
+              <li class="socials-item">
+                <a href="" class="socials-link link">
+                  <svg width="20" height="20">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="address-item">
-                <a href="tel:+380961111111" class="address-contacts link"
-                  >+38 096 111 11 11</a
-                >
+              <li class="socials-item">
+                <a href="" class="socials-link link">
+                  <svg width="20" height="20">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="socials-item">
+                <a href="" class="socials-link link">
+                  <svg width="20" height="20">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
+          </div>
         </div>
-        <div class="socials">
-          <h3 class="socials-title">приєднуйтесь</h3>
-          <ul class="socials-list list">
-            <li class="socials-item">
-              <a href="" class="socials-link link">
-                <svg width="20" height="20">
-                  <use href="./images/icons.svg#icon-instagram"></use>
+        <div class="sign-up-form">
+          <form name="signup_form" autocomplete="on" novalidate>
+            <h3 class="sign-up-title">Підпишіться на розсилку</h3>
+            <div class="sign-up">
+              <input
+                class="sign-up-input"
+                type="email"
+                name="email"
+                placeholder="E-mail"
+                autofocus
+              />
+              <button class="sign-up-btn" type="submit">
+                Підписатися
+                <svg width="24" height="24">
+                  <use href="./images/icons.svg#icon-send"></use>
                 </svg>
-              </a>
-            </li>
-            <li class="socials-item">
-              <a href="" class="socials-link link">
-                <svg width="20" height="20">
-                  <use href="./images/icons.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="socials-item">
-              <a href="" class="socials-link link">
-                <svg width="20" height="20">
-                  <use href="./images/icons.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="socials-item">
-              <a href="" class="socials-link link">
-                <svg width="20" height="20">
-                  <use href="./images/icons.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </footer>
@@ -469,6 +491,38 @@
             <use href="./images/icons.svg#icon-close-cross"></use>
           </svg>
         </button>
+        <form class="user-form">
+          <!-- <label for="name">Ім'я</label> -->
+          <input
+            type="text"
+            class="form-input"
+            name="user-name"
+            required
+            placeholder=""
+            minlength=""
+            id="name"
+          />
+          <input
+            type="text"
+            class="form-input"
+            name="user-email"
+            required
+            placeholder=""
+          />
+          <input
+            type="text"
+            class="form-input"
+            name="user-phone"
+            required
+            placeholder=""
+          />
+          <textarea
+            name="user-message"
+            class="form-input form-textarea"
+            placeholder="Введіть текст"
+          ></textarea>
+          <button class="form-btn" type="submit">Відправити</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
