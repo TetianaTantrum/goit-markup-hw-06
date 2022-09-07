@@ -471,7 +471,6 @@
                 type="email"
                 name="email"
                 placeholder="E-mail"
-                autofocus
               />
               <button class="sign-up-btn" type="submit">
                 Підписатися
@@ -492,35 +491,35 @@
           </svg>
         </button>
         <form class="user-form">
-          <!-- <label for="name">Ім'я</label> -->
-          <input
-            type="text"
-            class="form-input"
-            name="user-name"
-            required
-            placeholder=""
-            minlength=""
-            id="name"
-          />
-          <input
-            type="text"
-            class="form-input"
-            name="user-email"
-            required
-            placeholder=""
-          />
-          <input
-            type="text"
-            class="form-input"
-            name="user-phone"
-            required
-            placeholder=""
-          />
-          <textarea
-            name="user-message"
-            class="form-input form-textarea"
-            placeholder="Введіть текст"
-          ></textarea>
+          <label
+            >Ім'я
+            <input
+              type="text"
+              class="form-input"
+              name="user-name"
+              required
+              minlength="2"
+          /></label>
+          <label>
+            Телефон
+            <input type="tel" class="form-input" name="user-phone" required
+          /></label>
+          <label>
+            Пошта
+            <input type="email" class="form-input" name="user-email" required
+          /></label>
+          <label>
+            Коментар
+            <textarea
+              name="user-message"
+              class="form-input form-textarea"
+              placeholder="Введіть текст"
+            ></textarea>
+          </label>
+          <input type="checkbox" name="policy" id="policy" />
+          <label for="policy"
+            >Погоджуюся з розсилкою та приймаю <span >Умови договору</span>
+          </label>
           <button class="form-btn" type="submit">Відправити</button>
         </form>
       </div>
@@ -528,3 +527,4 @@
     <script src="./js/modal.js"></script>
   </body>
 </html>
+
