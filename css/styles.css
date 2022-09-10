@@ -732,6 +732,8 @@ ul ol {
 }
 .user-form {
   margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
 }
 .form-text {
   margin-bottom: 12px;
@@ -801,6 +803,18 @@ ul ol {
   cursor: pointer;
   margin-right: 8px;
 }
+.form-policy {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--text-color);
+}
+.form-policy:checked .form-own-check {
+  background-color: var(--accent-color);
+}
+
 .form-policy {
   display: flex;
   align-items: center;
