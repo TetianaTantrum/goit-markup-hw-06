@@ -648,11 +648,12 @@ ul ol {
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+  color: var(--text-light-color);
 }
-/* .sign-up-policy{
+.sign-up-policy{
   text-decoration-line: underline;
-  color: #2196F3;
-} */
+  color: var(--accent-color);
+}
 .sign-up-btn {
   display: flex;
   justify-content: center;
@@ -795,15 +796,26 @@ ul ol {
   position: absolute;
   appearance: none;
 }
+/*  */
 .form-own-check {
-  width: 16px;
-  height: 15px;
   border: 1px solid var(--title-color);
   border-radius: 3px;
   cursor: pointer;
   margin-right: 8px;
+    margin-left: 14px;
+}
+.form-own-check-icon {
+  display: none;
+  width: 16px;
+  height: 15px;
+  border-radius: 3px;
+  cursor: pointer;
+
+  fill: currentColor;
+  color: #fff;
 }
 .form-policy {
+  position: relative;
   display: flex;
   align-items: center;
   margin-bottom: 30px;
@@ -811,8 +823,12 @@ ul ol {
   line-height: 1.71;
   color: var(--text-color);
 }
-.form-policy:checked .form-own-check {
+.form-check:checked + .form-own-check {
   background-color: var(--accent-color);
+
+  background-size: contain;
+  background-origin: border-box;
+  border-color: var(--accent-color);
 }
 
 .form-policy {
@@ -836,7 +852,6 @@ ul ol {
 .form-check:checked + .form-own-check .form-own-check-icon {
   display: block;
 }
-
 
 .form-btn {
   margin-left: auto;
