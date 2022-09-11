@@ -647,6 +647,11 @@ ul ol {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   color: var(--text-light-color);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.sign-up-input:focus {  
+  outline: none;
+  border-color: var(--accent-color);
 }
 .sign-up-policy{
   text-decoration-line: underline;
@@ -674,6 +679,11 @@ ul ol {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.sign-up-btn:hover,
+.sign-up-btn:focus {
+background-color: var(--accent-hover-color);
 }
 /* =================== modal ===================== */
 .backdrop {
@@ -850,7 +860,6 @@ ul ol {
 .form-check:checked + .form-own-check .form-own-check-icon {
   display: block;
 }
-
 .form-btn {
   margin-left: auto;
   margin-right: auto;
